@@ -892,6 +892,7 @@ blockquote {
     display: block;
     position: relative;
     width: 320px;
+    left: -7px;
   }
 }
 
@@ -927,8 +928,8 @@ blockquote {
   .idea__top__left_fill {
     width: 328px;
     height: 75px;
-    top: 28px;
-    left: 2px;
+    top: 32px;
+    left: 0px;
   }
 }
 
