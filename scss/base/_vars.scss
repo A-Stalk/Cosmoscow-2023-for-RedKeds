@@ -1,0 +1,46 @@
+// Fonts
+$font-main: 'HelveticaWorld-Regular';
+$font-main-italic: 'HelveticaWorld-Italic';
+$font-secondary: 'Albina-Regular';
+$font-secondary-italic: 'Albina-coursive';
+
+// Colors
+$red: #ff0000;
+$light: #ffffff;
+$dark: #000000;
+$grey: #ebebeb;
+
+// Font-size
+// Desktop
+$desk_bigger: 44px;
+$desk_title: 28px;
+$desk_subtitle: 20px;
+$desk_main: 18px;
+$desk_speech: 20px;
+$desk_credits: 14px;
+$small: 12px;
+// Tablet
+$tab_bigger: 36px;
+$tab_title: 24px;
+$tab_subtitle: 18px;
+$tab_main: 16px;
+$tab_speech: 18px;
+// $tab_credits: 14px;
+
+// Mobile
+$mob_bigger: 32px;
+$mob_title: 24px;
+$mob_subtitle: 16px;
+$mob_main: 14px;
+$mob_speech: 18px;
+// $mob_credits: 14px;
+
+// left-padding
+$pl_desktop: 60px;
+$pl_tablet: 35px;
+$pl_mobile: 28px;
+
+// Breakpoints
+$desk: 1280px;
+$tab: 768px;
+$mob: 375px;

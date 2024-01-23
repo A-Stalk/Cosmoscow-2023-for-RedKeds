@@ -1,0 +1,399 @@
+@mixin mediaTab {
+  @media screen and (min-width: $tab) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin mediaMob {
+  @media screen and (min-width: $mob) and (max-width: 767px) {
+    @content;
+  }
+}
+
+// !animation
+
+@keyframes heartBeat {
+  0%,
+  10% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(#fff, 1);
+  }
+  45% {
+    box-shadow: 0 0 0 16px rgba(#fff, 0);
+  }
+  45%,
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@mixin scaleUp {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+// !buttons
+
+@mixin header__burger_button {
+  background-image: url(../images/blocks/header/burger.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+@mixin image_button {
+  background-image: url(../images/image_button+.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 100px;
+  min-height: 100px;
+  width: 7vw;
+  height: 7vw;
+  z-index: 5;
+  @include scaleUp;
+  &:hover {
+    background-image: url(../images/image_button-.png);
+  }
+
+  @include mediaTab {
+    min-width: 80px;
+    min-height: 80px;
+    width: fit-content;
+    height: fit-content;
+  }
+  @include mediaMob {
+    min-width: 50px;
+    min-height: 50px;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@mixin button_up {
+  background-image: url(../images/button_up.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 34px;
+  min-height: 18px;
+  width: 4vw;
+  height: 2vw;
+
+  @include scaleUp;
+  &:hover {
+    background-image: url(../images/button_up_hover.png);
+  }
+
+  @include mediaTab {
+    min-width: 34px;
+    min-height: 18px;
+    width: fit-content;
+    height: fit-content;
+  }
+  @include mediaMob {
+    min-width: 34px;
+    min-height: 18px;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@mixin footer__main__middle_button {
+  background-image: url('../images/blocks/footer/desktop/footer__main__middle_button.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  cursor: pointer;
+  min-width: 100px;
+  min-height: 100px;
+  width: 7vw;
+  height: 7vw;
+  border: $light;
+  border-radius: 50%;
+  animation: heartBeat 1.5s ease-in-out infinite;
+  &:hover {
+    animation: heartBeat 0.7s ease-in-out infinite;
+  }
+
+  @include mediaTab {
+    min-width: 80px;
+    min-height: 80px;
+    width: fit-content;
+    height: fit-content;
+  }
+  @include mediaMob {
+    min-width: 50px;
+    min-height: 50px;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+// !images for background: section mission
+
+@mixin mission__tape__top {
+  background-image: url(../images/blocks/mission/tape.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+// !images for background: section idea
+
+@mixin idea__top__left_fill {
+  background-image: url(../images/blocks/idea/desktop/idea__top__left_text.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mediaTab {
+    background-image: url(../images/blocks/idea/tablet/idea__top__left_text.png);
+  }
+
+  @include mediaMob {
+    background-image: url(../images/blocks/idea/mobile/idea__top__left_text.png);
+  }
+}
+
+@mixin idea__top__right_list {
+  background-image: url(../images/blocks/idea/desktop/idea__top__right_list.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mediaTab {
+    background-image: url(../images/blocks/idea/tablet/idea__top__right_list.png);
+  }
+
+  @include mediaMob {
+    background-image: url(../images/blocks/idea/mobile/idea__top__right_list.png);
+    background-size: cover;
+  }
+}
+
+@mixin idea__bottom__speech_denis_fill_1 {
+  background-image: url(../images/blocks/idea/desktop/idea__bottom__speech_denis_fill1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mediaTab {
+    background-image: url(../images/blocks/idea/tablet/idea__bottom__speech_denis_fill1.png);
+  }
+
+  @include mediaMob {
+    background-image: url(../images/blocks/idea/mobile/idea__bottom__speech_denis_fill1_desk.png);
+  }
+}
+@mixin idea__bottom__speech_denis_fill_1_mob {
+  background-image: url(../images/blocks/idea/mobile/idea__bottom__speech_denis_fill1_mob.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@mixin idea__bottom__speech_denis_fill_1_1 {
+  background-image: url(../images/blocks/idea/desktop/idea__bottom__speech_denis_fill1_1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin idea__bottom__speech_denis_fill_2_1 {
+  background-image: url(../images/blocks/idea/desktop/idea__bottom__speech_denis_fill2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mediaTab {
+    background-image: url(../images/blocks/idea/tablet/idea__bottom__speech_denis_fill2.png);
+  }
+
+  @include mediaMob {
+    background-image: url(../images/blocks/idea/mobile/idea__bottom__speech_denis_fill2_desk1.png);
+  }
+}
+
+@mixin idea__bottom__speech_denis_fill_2_2 {
+  @include mediaMob {
+    background-image: url(../images/blocks/idea/mobile/idea__bottom__speech_denis_fill2_desk2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin idea__bottom__speech_denis_fill_2_mob1 {
+  @include mediaMob {
+    background-image: url(../images/blocks/idea/mobile/idea__bottom__speech_denis_fill2_mob1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@mixin idea__bottom__speech_denis_fill_2_mob2 {
+  @include mediaMob {
+    background-image: url(../images/blocks/idea/mobile/idea__bottom__speech_denis_fill2_mob2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@mixin idea__bottom__speech_denis_fill_3 {
+  background-image: url(../images/blocks/idea/desktop/idea__bottom__speech_denis_fill3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mediaTab {
+    background-image: url(../images/blocks/idea/tablet/idea__bottom__speech_denis_fill3.png);
+  }
+  @include mediaMob {
+    background-image: url(../images/blocks/idea/mobile/idea__bottom__speech_denis_fill3_desk.png);
+  }
+}
+@mixin idea__bottom__speech_denis_fill_3_mob {
+  background-image: url(../images/blocks/idea/mobile/idea__bottom__speech_denis_fill3_mob.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+// !images for background : section problem
+
+@mixin problem_layout_1 {
+  background-image: url('../images/blocks/problem/desktop/problem_layout.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include mediaTab {
+    background-image: url('../images/blocks/problem/tablet/problem_layout.png');
+  }
+  @include mediaMob {
+    background-image: url('../images/blocks/problem/mobile/problem__main__bottom_layout.png');
+  }
+}
+@mixin problem__main__top__right_list {
+  background-image: url(../images/blocks/problem/desktop/problem__main__top__right_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mediaTab {
+    background-image: url(../images/blocks/problem/tablet/problem__main__top__right_bg.png);
+  }
+
+  @include mediaMob {
+    background-image: url(../images/blocks/problem/mobile/problem__main__top__right_bg.png);
+    background-size: contain;
+  }
+}
+
+@mixin problem__main__bottom_layout_middle_mob {
+  background-image: url('../images/blocks/problem/mobile/problem__main__bottom_layout_middle_mob.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@mixin problem__main__bottom_layout_middle_desk {
+  background-image: url('../images/blocks/problem/mobile/problem__main__bottom_layout_middle_desk.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@mixin problem__main__bottom_layout_bottom_mob {
+  background-image: url('../images/blocks/problem/mobile/problem__main__bottom_layout_bottom_mob.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@mixin problem__main__bottom_layout_bottom_desk {
+  background-image: url('../images/blocks/problem/mobile/problem__main__bottom_layout_bottom_desk.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// !images for background : section exit
+
+@mixin exit__main__top__right {
+  background-image: url('../images/blocks/exit/desktop/exit__main__top__image.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@mixin exit__main__middle_price {
+  background-image: url('../images/blocks/exit/desktop/exit__main__middle_price.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// !images for background : footer
+@mixin footer_picture {
+  background-image: url('../images/blocks/footer/desktop/footer_picture.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mediaMob {
+    // background-image: url('../images/blocks/footer/mobile/footer_picture.png');
+  }
+}
+
+@mixin footer__main__top__left__image {
+  background-image: url('../images/blocks/footer/desktop/footer__main__top__left__image.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mediaMob {
+    background-image: url('../images/blocks/footer/mobile/footer__main__top__left__image_mob.png');
+  }
+}
+
+@mixin footer__main__top__right_text_fill {
+  background-image: url('../images/blocks/footer/desktop/footer__main__top__right_text_fill.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin footer__main__middle__partners__top_image {
+  background-image: url('../images/blocks/footer/desktop/footer__main__middle__partners__top_image.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@mixin footer__main__middle__partners_bottom_redkeds {
+  background-image: url('../images/blocks/footer/desktop/footer__main__middle__partners_bottom_redkeds.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include scaleUp;
+}
+
+@mixin footer__main__middle__partners_bottom_hc {
+  background-image: url('../images/blocks/footer/desktop/footer__main__middle__partners_bottom_hc.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include scaleUp;
+}
+
+@mixin footer__main__middle__partners_bottom_cosmoscow {
+  background-image: url('../images/blocks/footer/desktop/footer__main__middle__partners_bottom_cosmoscow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include scaleUp;
+}
+
+@mixin footer__main__middle__partners_bottom_myinvest {
+  background-image: url('../images/blocks/footer/desktop/footer__main__middle__partners_bottom_myinvest.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include scaleUp;
+}
+
+@mixin footer__bottom__messengers_vk {
+  background-image: url('../images/blocks/footer/desktop/footer__bottom__messengers_vk.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include scaleUp;
+  &:hover {
+    background-image: url('../images/blocks/footer/desktop/footer__bottom__messengers_vk_click.png');
+  }
+}
+@mixin footer__bottom__messengers_ig {
+  background-image: url('../images/blocks/footer/desktop/footer__bottom__messengers_ig.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include scaleUp;
+  &:hover {
+    background-image: url('../images/blocks/footer/desktop/footer__bottom__messengers_ig_click.png');
+  }
+}
+@mixin footer__bottom__messengers_tg {
+  background-image: url('../images/blocks/footer/desktop/footer__bottom__messengers_tg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include scaleUp;
+  &:hover {
+    background-image: url('../images/blocks/footer/desktop/footer__bottom__messengers_tg_click.png');
+  }
+}
