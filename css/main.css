@@ -2018,9 +2018,9 @@ blockquote {
 @media screen and (min-width: 375px) and (max-width: 767px) {
   .problem__main__bottom_image {
     transform: rotate(-5deg);
-    width: 70%;
-    top: -321px;
-    left: -257px;
+    width: 400px;
+    top: -325px;
+    left: -268px;
   }
 }
 
